@@ -1,17 +1,18 @@
 import java.util.*;
-public class array
+public class palin
 {
     public static void main(String args[])
     {
         Scanner sc=new Scanner(System.in);
-        int n,a[],i,r,rev,ori,c=0;
+        int n,a[],ori,rev,c,r;
         n=sc.nextInt();
         a=new int[n];
-        for(i=0;i<n;i++)
+        for(int i=0;i<n;i++)
         {
             a[i]=sc.nextInt();
         }
-        for(i=0;i<n;i++)
+        c=0;
+        for(int i=0;i<n;i++)
         {
             ori=a[i];
             rev=0;
@@ -23,7 +24,7 @@ public class array
             }
             if(rev==ori)
             {
-                c+=1;
+                c++;
             }
         }
         System.out.println(c);
